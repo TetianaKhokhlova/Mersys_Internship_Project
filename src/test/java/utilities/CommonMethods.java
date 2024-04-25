@@ -88,6 +88,7 @@ public class CommonMethods {
             log.warn("InterruptedException in Thread.sleep(). Message: " + e.getMessage());
         }
 
+
     }
 
 }

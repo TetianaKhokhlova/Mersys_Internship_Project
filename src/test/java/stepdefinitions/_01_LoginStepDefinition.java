@@ -31,6 +31,7 @@ _01_LoginPage page = new _01_LoginPage();
     @Then("I press Login button")
     public void i_press_login_button() {
     page.clickElement(page.loginButton);
+
     }
 
 }

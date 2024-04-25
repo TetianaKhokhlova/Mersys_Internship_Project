@@ -69,13 +69,11 @@ public class CommonMethods {
     public void actionClick(WebElement element){
         Actions action = new Actions(DriverClass.getDriver());
         action.moveToElement(element).click(element).build().perform();
-
     }
     public void clickMethod(WebElement element){
         waitUntilClickable(element);
         scrollToElement(element);
         element.click();
-
     }
     public void navigateBack(){
         DriverClass.getDriver().navigate().back();

@@ -16,9 +16,7 @@ _01_LoginPage page = new _01_LoginPage();
     public void i_navigate_to_the_mersys_login_page() {
         DriverClass.getDriver().get("https://test.mersys.io/");
         page.waitTime(1);
-
     }
-
     @Given("I enter correct username and password")
     public void i_enter_correct_username_and_password(DataTable dataTable) {
         List<String> listOfData = dataTable.asList();

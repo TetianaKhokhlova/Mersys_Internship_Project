@@ -19,7 +19,6 @@ public class DriverClass {
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         }
         return driver;
     }
@@ -27,8 +26,6 @@ public class DriverClass {
         if (driver==null){
             driver.quit();
             driver=null;
-
-
         }
     }
 }

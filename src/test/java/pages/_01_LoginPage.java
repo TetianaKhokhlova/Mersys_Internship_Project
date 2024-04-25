@@ -14,8 +14,4 @@ public class _01_LoginPage extends CommonMethods {
 
    @FindBy(xpath = "//span[@class='mdc-button__label']")
     public WebElement loginButton;
-
-
-
-
 }

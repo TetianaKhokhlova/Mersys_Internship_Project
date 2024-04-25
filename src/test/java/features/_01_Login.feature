@@ -6,3 +6,4 @@ Feature:  Mersys Login Page
           |Student_10|
           |S12345|
     Then  I press Login button
+

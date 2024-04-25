@@ -25,9 +25,7 @@ _01_LoginPage page = new _01_LoginPage();
         page.sendKeys(page.usernameTextBox,listOfData.get(0));
         page.sendKeys(page.passwordTextBox,listOfData.get(1));
         page.waitTime(1);
-
     }
-
     @Then("I press Login button")
     public void i_press_login_button() {
     page.clickElement(page.loginButton);

@@ -77,7 +77,6 @@ public class CommonMethods {
         element.click();
 
     }
-
     public void navigateBack(){
         DriverClass.getDriver().navigate().back();
     }

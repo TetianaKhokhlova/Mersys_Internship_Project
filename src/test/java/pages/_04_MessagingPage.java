@@ -15,7 +15,7 @@ public class _04_MessagingPage extends CommonMethods {
     public WebElement hamburgerMenu;
 
 
-    @FindBy(xpath = "//div[@class='ng-star-inserted']//div[@fxlayout='row']//span[@class='ng-star-inserted']//span[@class='mat-mdc-focus-indicator']")
+    @FindBy(xpath = "//span[contains(text(),'Messaging')]")
     public WebElement messagingLink;
     //(*[name()='polygon'])[1]
     @FindBy(xpath = "//span[contains(text(),'New Message')]")

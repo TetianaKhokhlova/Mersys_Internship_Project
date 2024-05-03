@@ -17,7 +17,7 @@ public class _04_MessagingStepDefinition {
 
     @Given("I need to click on the hamburger menu")
        public void i_need_to_click_on_the_hamburger_menu() {
-        page.clickElement(page.hamburgerMenu);
+        page.clickJSExecutor(page.hamburgerMenu);
         page.waitTime(1);
 
        }

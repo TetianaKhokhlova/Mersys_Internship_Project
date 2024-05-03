@@ -5,7 +5,7 @@ import org.testng.Assert;
 import pages._08_FinancePage;
 import utilities.DriverClass;
 
-import static utilities.CommonMethods.waitTime;
+
 
 public class _08_FinanceStepDefinition {
 
@@ -24,7 +24,7 @@ public class _08_FinanceStepDefinition {
     @Given("I click on My Finance")
     public void i_click_on_my_finance() {
      financePage.clickElement(financePage.myFinanceMenu);
-     waitTime(1);
+     financePage.waitTime(1);
     }
 
     @Then("I should verify the homepage")
@@ -32,7 +32,7 @@ public class _08_FinanceStepDefinition {
      String actualUrl = DriverClass.getDriver().getCurrentUrl();
      String expectedUrl = "https://test.mersys.io/student-finance/active";
      Assert.assertTrue(actualUrl.contains(expectedUrl));
-     waitTime(1);
+        financePage.waitTime(1);
      // close
         DriverClass.quitDriver();
     }

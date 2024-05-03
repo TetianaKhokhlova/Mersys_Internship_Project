@@ -2,7 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.*;
 import pages._13_AttendancePage;
-import static utilities.CommonMethods.waitTime;
+
 
 public class _13_AttendanceStepDefinition {
 
@@ -10,13 +10,13 @@ public class _13_AttendanceStepDefinition {
 
     @Given("I click on Attendance menu")
     public void i_click_on_attendance_menu() {
-        waitTime(3);
+       attendancePage.waitTime(3);
         attendancePage.clickMethod(attendancePage.attendanceMenu);
     }
 
     @Given("I click on Attendance excuse page")
     public void i_click_on_attendance_excuse_page() {
-        waitTime(5);
+        attendancePage.waitTime(3);
         attendancePage.clickJSExecutor(attendancePage.attendanceExcusesPage);
     }
 
@@ -27,7 +27,7 @@ public class _13_AttendanceStepDefinition {
 
     @Given("I enter my excuse message in the message textbox")
     public void i_enter_my_excuse_message_in_the_message_textbox() {
-        waitTime(1);
+        attendancePage.waitTime(3);
         attendancePage.sendKeys(attendancePage.attendanceExcuseTextBox, "I can not join today");
     }
 
@@ -43,7 +43,7 @@ public class _13_AttendanceStepDefinition {
 
     @Given("I click on a File")
     public void i_click_on_a_file() {
-        waitTime(1);
+        attendancePage.waitTime(3);
         attendancePage.clickElement(attendancePage.addAttendanceExcuseFileCheckBox);
     }
 

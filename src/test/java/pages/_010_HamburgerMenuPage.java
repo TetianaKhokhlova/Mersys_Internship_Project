@@ -5,19 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import utilities.CommonMethods;
 public class _010_HamburgerMenuPage  extends CommonMethods{
 
-    @FindBy(xpath = "//button[@class='mat-mdc-menu-trigger mat-button-wrapper mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base']//fa-icon[@class='ng-fa-icon mat-mdc-tooltip-trigger']//*[name()='svg']")
+    @FindBy(xpath = "(//*[name()='svg'][@role='img'])[6]")
     public WebElement  HamburgerMenu ;
 
-    @FindBy(xpath = "//span[contains(text(),'Finance')]")
+    @FindBy(xpath = "(//span[contains(text(),'Finance')])[1]")
     public WebElement   Finance ;
 
-    @FindBy(xpath = "//span[contains(text(),'My Finance')]")
+    @FindBy(xpath = "(//span[contains(text(),'My Finance')])[1]")
     public WebElement MyFinance ;
 
-    @FindBy(xpath = "  //button[@class='mat-mdc-tooltip-trigger mat-badge mdc-icon-button mat-mdc-icon-button mat-badge-accent mat-#3f51b5 mat-mdc-button-base mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted']//span[@class='mat-mdc-focus-indicator']")
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[18]")
     public WebElement  SelectsViewIcon;
 
-    @FindBy(xpath = "//input[@id='mat-radio-8-input']")
+    @FindBy(xpath = "(//input[@id='mat-radio-10-input'])[1]")
     public WebElement  SelectsStripeAsThePaymentMethod ;
 
 

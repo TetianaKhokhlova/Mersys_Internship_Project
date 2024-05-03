@@ -7,8 +7,6 @@ Feature: Mersys Home Page
     Then  I press Login button
 
 
-Feature: Campus Site Payment
-
   Scenario: Student makes a payment using Stripe
     Given  that i navigates to the payment page through Hamburger Menu
     Then   i click Finance

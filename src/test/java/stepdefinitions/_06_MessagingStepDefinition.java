@@ -8,8 +8,8 @@ public class _06_MessagingStepDefinition {
     _06_MessagingPage page = new _06_MessagingPage();
     @Then("I press on hamburger menu, choose Messaging and go to Outbox link")
     public void i_press_on_hamburger_menu_choose_messaging_and_go_to_outbox_link() {
-        page.waitUntilClickable(page.hamburgerMenu);
-        page.clickMethod(page.hamburgerMenu);
+       // page.waitUntilClickable(page.hamburgerMenu);
+        page.clickJSExecutor(page.hamburgerMenu);
         page.clickElement(page.messagingLink);
         page.waitTime(2);
         page.actionClick(page.outBoxLink);

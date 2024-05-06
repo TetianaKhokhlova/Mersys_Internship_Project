@@ -122,4 +122,9 @@ public class US_020 extends CommonMethods {
     @FindBy(xpath = "//body[1]/app[1]/student-layout[1]/div[1]/mat-drawer-container[1]/mat-drawer-content[1]/div[2]/ms-assignment-panel-student[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[2]/ms-icon-button[4]/button[1]/span[2]")
     public WebElement starDiscussionSpanish;
 
+    @FindBy(xpath = "//button[@class='mat-mdc-menu-trigger user-button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base ng-star-inserted']//span[@class='mat-mdc-focus-indicator']")
+    public WebElement profileSettingClick;
+    @FindBy(xpath = "//span[contains(text(),'Sign Out')]")
+    public WebElement singOutClick;
+
 }

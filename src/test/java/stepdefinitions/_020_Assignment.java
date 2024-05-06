@@ -5,6 +5,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.US_020;
 
+import static utilities.DriverClass.getDriver;
+
 public class _020_Assignment {
     US_020 step = new US_020();
     @Then("I am logged in as a student on the homework list page")
@@ -131,6 +133,10 @@ public class _020_Assignment {
         step.clickJSExecutor(step.closeFrontFrontDiscussionSpanish);
         step.waitTime(1);
         step.clickJSExecutor(step.starDiscussionSpanish);
+        getDriver().navigate().refresh();
+        step.clickJSExecutor(step.profileSettingClick);
+        step.waitTime(1);
+        step.clickJSExecutor(step.singOutClick);
     }
 
 

@@ -1,6 +1,8 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 import pages._06_MessagingPage;
 
 public class _09_MessagingFinanceStepDefinition {
@@ -33,4 +35,9 @@ public class _09_MessagingFinanceStepDefinition {
 
     }
 
+    @And("I can see Installment table")
+    public void iCanSeeInstallmentTable() {
+        page.waitUntilVisible(page.installmentTable);
+        Assert.assertTrue(page.installmentTable.isDisplayed());
+    }
 }

@@ -60,7 +60,8 @@ public class _06_MessagingPage extends CommonMethods {
   @FindBy(xpath ="(//span[@class='mdc-tab__content'])[2] ")
   public WebElement balanceDetail;
 
-
+@FindBy(xpath = "(//div[contains(text(),'Installment')])[1]")
+    public WebElement installmentTable;
 
 }
 

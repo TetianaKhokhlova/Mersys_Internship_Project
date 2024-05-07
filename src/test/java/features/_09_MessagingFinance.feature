@@ -9,3 +9,4 @@ Feature:
     Then   I go to hamburger menu and press Finance link ---> My Finance
     And    I press on a student profile
     Then   I go to Fee Balance Detail
+    And    I can see Installment table

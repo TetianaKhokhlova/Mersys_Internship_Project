@@ -5,7 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import utilities.CommonMethods;
 
 public class _06_MessagingPage extends CommonMethods {
-    @FindBy(xpath = "//button[@class='mat-mdc-menu-trigger mat-button-wrapper mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base']//fa-icon[@class='ng-fa-icon mat-mdc-tooltip-trigger']//*[name()='svg']")
+
+    @FindBy(xpath = "//div[@class='ng-star-inserted']//div[@fxlayout='row']//span[@class='ng-star-inserted']//span[@class='mat-mdc-focus-indicator']")
     public WebElement hamburgerMenu;
 
     @FindBy(xpath = "//span[@class='mat-mdc-menu-item-text'][1]")
@@ -42,7 +43,24 @@ public class _06_MessagingPage extends CommonMethods {
     public WebElement restoreItem;
 
     @FindBy(xpath = " //div[contains(text(),'Message successfully restored from trash')]")
-    public WebElement restoreMessage ;
+    public WebElement restoreMessage;
+
+    //_09_Finance
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-menu-item-text'])[2]")
+    public WebElement financeLink;
+
+    @FindBy(xpath = "(//span[contains(text(),'My Finance')])[1]")
+    public WebElement financeButton;
+
+    //button[@class='mat-mdc-menu-item mat-mdc-focus-indicator ng-star-inserted']
+  @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[18]")
+   public WebElement viewFinance;
+
+  @FindBy(xpath ="(//span[@class='mdc-tab__content'])[2] ")
+  public WebElement balanceDetail;
+
+
 
 }
 

@@ -11,6 +11,7 @@ import utilities.CommonMethods;
 
 public class _04_MessagingPage extends CommonMethods {
 
+
     @FindBy(xpath= "(//fa-icon[@class='ng-fa-icon mat-mdc-tooltip-trigger'])[6]")
     public WebElement hamburgerMenu;
 

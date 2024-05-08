@@ -22,8 +22,6 @@ public class _04_MessagingStepDefinition {
 
        }
 
-
-
        @Given("I should be able to click on the Messaging")
         public void i_should_be_able_to_click_on_the_messaging() {
            page.clickElement(page.messagingLink);

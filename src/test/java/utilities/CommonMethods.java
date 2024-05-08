@@ -17,6 +17,15 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.awt.AWTException;
+
+
+
+
 public class CommonMethods {
 
     public CommonMethods() {
@@ -26,7 +35,11 @@ public class CommonMethods {
     protected static final Logger log = LogManager.getLogger();
     public WebDriverWait wait = new WebDriverWait(DriverClass.getDriver(), Duration.ofSeconds(10));
 
+
+
+
     public void waitUntilVisible(WebElement element) {
+
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -86,15 +99,45 @@ public class CommonMethods {
         DriverClass.getDriver().navigate().back();
     }
 
+
+
     public void waitTime(int seconds) {
+
         try {
             Thread.sleep(1000L * seconds);
         } catch (InterruptedException e) {
             log.warn("InterruptedException in Thread.sleep(). Message: " + e.getMessage());
         }
-
-
     }
+
+
+    public void uploadFileWithRobot(String filePath) {
+            StringSelection stringSelection = new StringSelection(filePath);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+
+            Robot robot = null;
+            try {
+                robot = new Robot();
+            } catch (AWTException e) {
+                e.printStackTrace();
+                return;
+            }
+
+            // Press CTRL+V to paste the file path
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.delay(500);
+
+            // Press Enter to close the dialog and upload the file
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(500);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+        }
+
 
     public void screenShot(WebDriver driver) {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
@@ -114,3 +157,4 @@ public class CommonMethods {
 
     }
 }
+

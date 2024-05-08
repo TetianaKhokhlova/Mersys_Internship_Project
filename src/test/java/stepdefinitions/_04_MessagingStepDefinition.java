@@ -17,8 +17,8 @@ public class _04_MessagingStepDefinition {
 
     @Given("I need to click on the hamburger menu")
        public void i_need_to_click_on_the_hamburger_menu() {
-        page.clickElement(page.hamburgerMenu);
-           page.waitTime(1);
+        page.clickJSExecutor(page.hamburgerMenu);
+        page.waitTime(1);
 
        }
 
@@ -73,7 +73,7 @@ public class _04_MessagingStepDefinition {
        @Then("I need to click on the hamburger menu4")
   public void i_need_to_click_on_the_hamburger_menu4() {
            page.clickElement(page.hamburgerMenu);
-           page.waitTime(1);
+         page.waitTime(1);
 
         }
       @Then("I should be able to click on the Messaging4")

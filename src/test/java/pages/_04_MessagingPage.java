@@ -11,13 +11,16 @@ import utilities.CommonMethods;
 
 public class _04_MessagingPage extends CommonMethods {
 
+
     @FindBy(xpath= "(//fa-icon[@class='ng-fa-icon mat-mdc-tooltip-trigger'])[6]")
     public WebElement hamburgerMenu;
 
 
+
     @FindBy(xpath = "//span[contains(text(),'Messaging')]")
     public WebElement messagingLink;
-    //(*[name()='polygon'])[1]
+ 
+
     @FindBy(xpath = "//span[contains(text(),'New Message')]")
     public WebElement newMessageButton;
 

@@ -7,6 +7,7 @@ Feature:
       |S12345|
     Then  I press Login button
 
+
     Scenario:
       Given I need to click on the hamburger menu
       And I should be able to click on the Messaging

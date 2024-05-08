@@ -11,12 +11,14 @@ Feature: Mersys Home Page
     Given  that i navigates to the payment page through Hamburger Menu
     Then   i click Finance
     Then   i click  My Finance
-    Then   i click veiw icon to open payment method
+    Then   i click view icon to open payment method
     And    i selects Stripe as the payment method
-    And    i enters $235 as the payment amount
+    And    i enters "235" dollars  as the payment amount
             |235|
     And    i completes the payment process
-    Then   the payment amount should be correctly determined as $235
+    Then   the payment amount should be correctly determined as "235" dollars
     And    i  should receive a payment confirmation
     Then    my  debt status should be updated
+
+
 

@@ -25,27 +25,27 @@ public class _10_HamburgerStepDefinitions {
         page.clickElement(page.MyFinance);
     }
 
-    @Then("i click veiw icon to open payment method")
-    public void iClickVeiwIconToOpenPaymentMethod() {
+    @Then("i click view icon to open payment method")
+    public void iClickViewIconToOpenPaymentMethod() {
         page.clickElement(page.SelectsViewIcon);
     }
+
 
     @And("i selects Stripe as the payment method")
     public void iSelectsStripeAsThePaymentMethod() {
         page.clickElement(page.SelectsStripeAsThePaymentMethod);
     }
 
-    @And("i enters ${int} as the payment amount")
-    public void iEnters$AsThePaymentAmount(int arg0) {
-
+    @And("i enters {string} dollars  as the payment amount")
+    public void iEntersDollarsAsThePaymentAmount(String arg0) {
     }
 
     @And("i completes the payment process")
     public void iCompletesThePaymentProcess() {
     }
 
-    @Then("the payment amount should be correctly determined as ${int}")
-    public void thePaymentAmountShouldBeCorrectlyDeterminedAs$(int arg0) {
+    @Then("the payment amount should be correctly determined as {string} dollars")
+    public void thePaymentAmountShouldBeCorrectlyDeterminedAsDollars(String arg0) {
     }
 
     @And("i  should receive a payment confirmation")
@@ -55,4 +55,6 @@ public class _10_HamburgerStepDefinitions {
     @Then("my  debt status should be updated")
     public void myDebtStatusShouldBeUpdated() {
     }
+
+
 }

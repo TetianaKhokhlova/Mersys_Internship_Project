@@ -17,8 +17,10 @@ public class _010_HamburgerMenuPage  extends CommonMethods{
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[18]")
     public WebElement  SelectsViewIcon;
 
-    @FindBy(xpath = "(//input[@id='mat-radio-10-input'])[1]")
+    @FindBy(xpath = "//label[normalize-space()='Stripe']")
     public WebElement  SelectsStripeAsThePaymentMethod ;
+
+
 
 
 
